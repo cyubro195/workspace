@@ -1,0 +1,58 @@
+
+
+table{
+  border: 3px solid black;
+  margin: auto;
+}
+tr,td{
+  border: 1px solid black;
+  padding: 3px;
+}
+
+.t1{
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+  background-color: antiquewhite;
+}
+
+.t2{
+  text-align: center;
+  font-weight: 600;
+  color: rgba(20, 19, 19, 0.936);
+}
+
+.tt2{
+  width: 40px;
+}
+.tt3{
+  width: 100px;
+}
+
+
+.s1{
+  color: red;
+  font-weight: bold;
+}
+span{
+  color: red;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.but{
+  text-align: center;
+  margin-top: -30px;
+}
+
+button{
+
+  width: 100px;
+  padding: 5px;
+  background-color: antiquewhite;
+  border: 1px solid #fff;
+  color: deeppink;
+
+}
+

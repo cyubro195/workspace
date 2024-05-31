@@ -1,0 +1,15 @@
+
+
+
+.img1{
+  /* hidden 설정하면 사라짐 */
+  visibility: visible;
+}
+
+.img2{
+  /* display: none; */
+}
+.img3{
+  opacity: 50%;
+}
+

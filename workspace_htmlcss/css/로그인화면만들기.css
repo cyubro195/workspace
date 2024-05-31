@@ -1,0 +1,125 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* 100% 화면 꽉 채우는 넓이는 vw, 높이는 vh */
+  
+}
+
+.container{
+  width: 800px;
+  height: 300px;
+  box-shadow: 0px 0px 6px lightgray;
+  /* 
+    첫번째 : x축으로의 그림자 이동
+    두번째 : y축으로의 그림자 이동
+    세번째 : 그림자의 퍼지는 정도
+    네번째 : 그림자 색상
+    네번째 : 그림자 색상
+  */
+  border-radius: 10px;
+  padding: 24px 16px;
+}
+
+.content{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 220px;
+}
+
+
+input[type="text"],input[type="password"]{
+  display: block;
+  margin-top: 4px;
+  margin-bottom: 8px;
+  width: 100%;
+  padding: 4px 4px;
+  border: 1px solid lightgrey;
+  border-radius: 6px;
+  outline: none;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus{
+ border: 1px solid slateblue;
+}
+
+.login-form{
+  width: 60%;
+  background-color: #eee;
+  border-radius: 6px;
+  box-shadow: 0px 0px 4px #ddd;
+  padding: 10px;
+
+}
+
+.intro{
+  width: 40%;
+  margin-left: 20px;
+  
+}
+
+.intro span {
+  color: greenyellow;
+  font-size: 0.7rem;
+
+}
+
+input[type="checkbox"]{
+  position: relative;
+  top: 1.5;
+}
+
+label{
+  font-weight: bold;
+  font-size: 0.8rem;
+  
+}
+
+.btn-div{
+  margin-top: 8px;
+}
+
+button{
+  color: white;
+  background-color: blueviolet;
+  /* outline: none; */
+  border: none;
+  width: 100px;
+  padding: 3px 0px;
+  border-radius: 4px;
+}
+
+button:hover{
+  color: white;
+  background-color: rgb(117, 37, 193);
+  cursor: pointer;
+}
+.intro > h4{
+  margin-bottom: 6px;
+}
+
+.intro li{
+  font-size: 0.8rem;
+  margin-bottom: 4px;
+}
+
+.intro a{
+  background-color: mediumpurple;
+  text-decoration: none;
+  color: white;
+  display: block;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 4px 0px;
+}
+
+p{
+  color: green;
+  margin: 6px 0px;
+  text-align: center;
+  font-size: 0.7rem;
+}

@@ -1,0 +1,28 @@
+
+#main{
+  border: 3px solid black;
+  margin: auto;
+  width: 500px;
+  height: 600px;
+  background-color: gray;
+  text-align: center
+  
+  ;
+}
+
+.dd1{
+  border: 2px solid black;
+  width: 400px;
+  height: 600px;
+  margin: auto;
+  background-color: greenyellow;
+}
+
+.d1{
+  border: 2px solid black;
+  width: 400px;
+  height: 30px;
+  margin: 10px;
+  background-color: coral;
+}
+

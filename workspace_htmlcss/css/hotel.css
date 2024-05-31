@@ -1,0 +1,91 @@
+
+
+body{
+  background-color: lightblue;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact{
+  background-color: white;
+  width: 350px;
+  border-radius: 20px;
+}
+
+.d1 > img {
+  width: 100%;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.heart{
+  position: relative;
+  border: 1px solid white;
+}
+
+.d2 {
+  padding: 5px;
+  margin: 5px;
+  border-bottom: 1px solid lightgrey;
+}
+
+.d2 > div {
+  font-size: 30px;
+  font-weight: bold;
+  color: coral;
+  padding: 5px 0px;
+}
+
+.d3{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid lightgrey;
+  height: 60px;
+}
+
+.d3 > div > span{
+  font-weight: bold;
+}
+
+.d4{
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+.d4 > p {
+  padding-bottom: 5px;
+  font-weight: 300;
+  font-size: 15px;
+}
+
+.d4 > div img {
+  width: 15%;
+  border-radius: 50%;
+}
+
+
+.text{
+  display: flex;
+ }
+
+button{
+  width: 100px;
+  height: 30px;
+  color: white;
+  background-color: greenyellow;
+  border: none;
+  border-radius: 5px;
+  
+}
+
+.text > div > span{
+  font-weight: bold;
+  font-size: 14px;
+
+}

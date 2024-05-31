@@ -1,0 +1,59 @@
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* 100% 화면 꽉 채우는 넓이는 vw, 높이는 vh */
+  
+}
+
+.container{
+  width: 1000px;
+  height: 500px;
+  box-shadow: 0px 0px 6px lightgray;
+  /* 
+    첫번째 : x축으로의 그림자 이동
+    두번째 : y축으로의 그림자 이동
+    세번째 : 그림자의 퍼지는 정도
+    네번째 : 그림자 색상
+    네번째 : 그림자 색상
+  */
+  border-radius: 10px;
+ 
+}
+
+.logo{
+  border-bottom:1px solid lightgray;
+  padding: 20px 0px;
+  margin: 20px;
+}
+
+.green{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 300px;
+  border: 1px solid red;
+}
+
+.box{
+  border: 1px solid black;
+  background-color: rgb(244, 244, 244);
+  border-radius: 10px;
+  padding-left: 10px;
+  flex-basis: 55%;
+  margin-right: 10px;
+  
+}
+
+.box > input{
+  width: 90%;
+  
+}
+
+.text{
+  border: 1px solid black;
+  flex-basis: 40%;
+}

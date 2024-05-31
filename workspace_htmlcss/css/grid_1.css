@@ -1,0 +1,41 @@
+
+
+.container{ 
+  width: 800px;
+  height: 600px;
+  margin: 20px auto;
+  border: 2px solid black;
+
+
+  display: grid;
+
+  /* grid-template-columns: 2fr 1fr 1fr; */
+  /* fr은 비율이라고 생각하면 됨! *그리드에서만 가능  */
+  grid-template-columns: repeat(3,1fr);
+  /* grid-template-columns: repeat(3,200px); */
+  /* 200px를 3개 하겠습니다 라는 뜻 */
+
+  grid-template-rows: repeat(3,1fr);
+  /* 3개짜리를 2개로 넣거나 안넣어도 최소값으로 들어감 */
+
+  gap: 20px 10px;
+
+}
+
+.container > div{
+  border: 1px solid red;
+}
+
+
+.container >div:first-child{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  /* 병합할때는 그리드 선을 기준으로 1,2,3으로 친다! */
+  background-color: aqua;
+}
+
+.container >div:nth-child(3){
+  grid-row: 1/ span 3;
+  /* 병합할때는 그리드 선을 기준으로 1,2,3으로 친다! */
+  background-color: aqua;
+}

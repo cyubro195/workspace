@@ -1,0 +1,47 @@
+
+.container{
+  width: 600px;
+  height: 200px;
+  border: 1px solid black;
+  margin: auto;
+  display: flex;
+  /* 높이가 없어도 알아서 가로 정렬이 됨 */
+}
+
+.container > div {
+  /* width: 100px;
+  height: 100px; */
+  border: 1px solid red;
+
+}
+
+.flex1{
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+}
+.flex2{
+  flex-direction: column;
+  /* 아래로 정렬됨, 크기도 균등하게 알아서 */
+  justify-content: center;
+  align-items: stretch;
+
+}
+
+/* .flex1 > div:nth-child(2){
+  align-self: flex-start;
+} */
+
+.flex1 >div:nth-child(1){
+  flex-basis: 50%;
+}
+.flex1 >div:nth-child(2){
+  flex-basis: 30%;
+}
+.flex1 >div:nth-child(3){
+  flex-basis: 10%;
+}
+.flex1 >div:nth-child(4){
+  flex-basis: 10%;
+}
+

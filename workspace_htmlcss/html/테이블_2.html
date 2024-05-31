@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    table{
+      border-collapse: collapse;
+      border: 1px solid black;
+      width: 400px;
+      text-align: center;
+    }
+    tr,td{
+      border: 1px solid black;
+    }
+
+  </style>
+</head>
+
+<!-- 컨트롤+스페이스 : 태그를 틀리거나 안뜰때 자동으로 뜨게할수있음 -->
+<!-- alt 키를 누른상태로 클릭하면 선택이 되는디 한꺼번에 텍스트를 넣거나 정리할수있 -->
+
+    <!-- <thead></thead> : 테이블 헤더(제목줄)를 의미함 -->
+    <!-- <tbody></tbody> : 테이블 표 내용에 대한 종합적인  -->
+    <!-- <tfoot></tfoot> : 테이블 맨 밑에 최종 점수느낌ㅇ???? << 사실 잘 안씀  -->
+
+
+<body>
+  <!-- 
+    table 태그 안에는 thead, tbody, tfooter, tr, caption, colgroup 태그만 올 수 있다.
+  -->
+
+  <table>
+    <!-- <colgroup></colgroup> : 테이블의 넓이를 지정하는 (열의 갯수만큼 만들어줘야함)  -->
+    <!-- colgroup 안에는 col 만 들어갈 수 있음 -->
+    <colgroup>
+      <!-- 전체길이말고 정해져있는 넓이에서 비율을 배분할 수 있음 -->
+      <col width="50%">
+      <col width="20%">
+      <col width="*">
+      <!-- *는 100%에 남은 비율을 넣겠다는 뜻 -->
+    </colgroup>
+    <!-- <caption></caption> : 표 테이블 제목을 표현함 -->
+    <caption>학생 정보</caption>
+    
+   <thead>
+     <tr>
+      
+       <td>이름</td>
+       <td>나이</td>
+       <td>점수</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>김길동</td>
+        <td>20</td>
+        <td>90</td>
+      </tr>
+      <tr>
+        <td>임꺽정</td>
+        <td>30</td>
+        <td>80</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td>평균</td>
+        <td>25</td>
+        <td>85</td>
+      </tr>
+    </tfoot>
+  </table>
+</body>
+</html>

@@ -1,0 +1,59 @@
+
+.container{
+  width: 100vw;
+  /* 가로로 꽉 채우겠딴 */
+  
+  /* width: 100%;
+  이 방법으로 쓸려면 body에다가 주고 추가적으로 html에도 줘야함, 살짝 귀찮음 */
+
+  border: 3px solid rgb(115, 0, 255);
+  /* box-sizing: border-box;
+  아무것도 안적으면 content-box가 됨 */
+
+  background-color: #C738BD;
+  padding: 16px;
+  text-align: center;
+ 
+}
+
+.header{
+  border: 3px solid hotpink;
+  height: 100px;
+  width: 100%;
+  line-height: 100px;
+  background-color: #E49BFF;
+
+}
+
+.main{
+  background-color: darkblue ;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.main > div {
+  height: 500px;
+
+}
+
+.main > div:nth-child(1) {
+  width: 20%;
+  background-color: #F8F9D7 ;
+  float: left;
+}
+
+.main > div:nth-child(2) {
+  width: 80%;
+  background-color: #D2649A ;
+  float: left;
+}
+
+
+.footer{
+  background-color: #850F8D;
+  width: 100%;
+  height: 100px;
+  
+
+}
+

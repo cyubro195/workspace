@@ -1,0 +1,72 @@
+
+.container{
+  width: 500px;
+  margin: 50px auto;
+}
+
+.menu{
+  display: flex;
+
+}
+
+/* 메뉴 호버 */
+.menu > li:hover .sub-menu {
+  /* display: block; > 블록 */
+  /* opacity: 1; > 투명*/ 
+  max-height: 200px;
+  /* 크기 맞출려면 auto로하면 맞춰줌 */
+  /* 200px까지만 넘치지않게 유지해줘 */
+
+}
+
+.menu > li {
+  width: 150px;
+  height: 50px;
+  text-align: center;
+  padding: 12px 0px;
+  background-color: black;
+
+  position: relative;
+}
+
+.menu > li::after{
+  content: "|";
+  color: white;
+  position: absolute;
+  right: 0px;
+}
+
+.menu > li:last-child::after{
+  content: none;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+}
+
+.sub-menu{
+  position: absolute;
+  top: 45px;
+  left: 0px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  /* display 속성에서는 애니메이션 안댬 */
+  /* display: none; */
+  /* opacity: 0; */
+  max-height: 0px;
+  transition: all 1s;
+
+}
+
+.sub-menu > li {
+  margin: 8px 0px;
+  color: white;
+
+}
+
+.sub-menu > li:hover{
+  font-weight: 600;
+  
+}

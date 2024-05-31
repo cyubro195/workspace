@@ -1,0 +1,19 @@
+.p1{
+  color: navy;
+}
+
+div{
+  color: aqua;
+  /* !important 붙이면 절대 고정값 */
+  background-color: cadetblue;
+}
+
+.d1{
+  color: blue;
+  background-color: beige;
+}
+
+#d1{
+  color: red;
+  background-color: beige;
+}

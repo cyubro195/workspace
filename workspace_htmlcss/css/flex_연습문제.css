@@ -1,0 +1,53 @@
+
+
+.container{
+  border: 3px solid black;
+  margin: auto;
+  width: 1000px;
+  height: 800px;
+  text-align: center;
+  background-color: bisque;
+}
+
+.header{
+  width: 100%;
+  height: 200px;
+  background-color: burlywood;
+
+}
+
+.header{
+  width: 100%;
+  height: 200px;
+  background-color: beige;
+
+}
+
+.main{
+  width: 100%;
+  height: 400px;
+  background-color: brown;
+
+}
+
+.side{
+  width: 100%;
+  height: 200px;
+  background-color: aqua;
+  
+}
+
+.content{
+  width: 100%;
+  height: 200px;
+  background-color: darksalmon;
+
+}
+
+.footer{
+  width: 100%;
+  height: 200px;
+  background-color: blueviolet;
+  
+}
+

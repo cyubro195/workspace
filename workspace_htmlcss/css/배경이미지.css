@@ -1,0 +1,30 @@
+body{
+  margin: 0;
+}
+
+
+.content{
+  background-image: url("배경.jpg");
+  background-repeat: no-repeat;
+  width: 100vw;
+  /* 지금 열려진 화면의 전체 */
+  height: 90vh;
+  border: 1px solid black;
+  background-size: cover;
+  /* background-size: cover; */
+  /* 영역에 여백없이 꽉 채워주면서
+     이미지의 비율은 유지해줌 */
+
+  /* background-size: contain; */
+  /* 이미지를 그대로 넣어줌
+     빈공간 많이 생김 */
+
+  /* background-size: auto; */
+  /* 원본 이미지 크기대로 보여주세요 */
+  
+}
+
+h3{
+  padding: 0px;
+  margin: 0px;
+}

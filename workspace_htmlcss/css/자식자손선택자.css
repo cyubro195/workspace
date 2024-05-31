@@ -1,0 +1,57 @@
+
+.ul{
+  background-color: cadetblue;
+  padding: 10px;
+}
+
+/* li{
+  background-color: burlywood;
+  margin: 10px;
+} */
+
+/* 자식 선택자 */
+/* ul이라는 클래스 안의 자식 li 태그들의 선택한거임 */
+
+.ul>li{
+  background-color: burlywood;
+  margin: 10px;
+}
+
+/* di 클래스를 가진 태그의 자식 중 div태그만 선택 */
+
+.d1>div{
+  background-color: aqua;
+}
+
+/* di 클래스를 가진 태그의 자식 중 span태그만 선택 */
+.d1>span{
+  background-color: blueviolet;
+}
+
+
+/* 자손선택자(하위선택자) */
+.d1 div{
+  color: red;
+}
+
+/* ul태그안의 test라는 클래스를 지닌 자식에서 하위 div 전체선택 */
+/* ul>.test div{  } */
+
+.u2>li:first-child{
+  color: blue;
+}
+.u2>li:last-child{
+  color: red;
+}
+
+/* 몇번째 자식에게 적용할건가유? */
+.u2>li:nth-child(3){
+  color: green;
+}
+
+/* 
+홀수인 자식들에게 적용하는거 
+.u2>li:nth-child(odd){
+  color: green;
+
+} */

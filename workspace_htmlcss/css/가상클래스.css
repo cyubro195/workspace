@@ -1,0 +1,93 @@
+
+  .container1{
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+    margin: 30px;    
+  }
+
+  .container1 > div {
+    width: 80px;
+    height: 80px;
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+    border: 1px solid salmon;
+
+
+/* 변환 : 전체 ~초 동안 */
+    transition: all 1s;
+  }
+
+/* hover : 선택자의 마우스를 올리면 발생함  */
+
+.d1:hover{
+  width: 120px;
+  height: 120px;
+}
+.d2:hover{
+  background-color: black;
+  color: yellow;
+}
+.d3:hover{
+  position: relative;
+  top: 10px;
+  left: 10px;
+
+}
+/*------------------*/
+
+input{
+  margin-left: 30px;
+  width: 250px;
+  padding: 10px 4px;
+  /* padding, height 다 됨!  */
+  border-radius: 8px;
+  border: 1px solid lightcoral; 
+  outline: none;
+  transition: all 1s;
+}
+
+/*  */
+
+/* input,button을 클릭하면 발생하는 클래스 속성 */
+input:focus{
+  width: 300px;
+  border: 2px solid salmon;
+}
+
+ul{
+  margin-left: 30px;
+
+}
+
+/* 
+before:선택자 앞에 인라인 요소 추가
+*/
+/* 주로 쇼핑몰에 많이 씀
+ */
+
+.li-1::before{
+  content: "new";
+  color: red;
+  background-color: cornsilk;
+  border-radius: 6px;
+  font-size: 10px;
+  padding: 2px 6px;
+  margin-right: 5px;
+}
+
+/* 
+after:선택자 뒤에 인라인 요소 추가 
+*/
+.li-1::after{
+  content: "css";
+}
+
+/* 
+마우스롤 호버하면 1배 커짐
+scale:1.1;
+*/

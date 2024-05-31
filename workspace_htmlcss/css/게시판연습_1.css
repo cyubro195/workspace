@@ -1,0 +1,97 @@
+
+/* 
+.nav{
+  margin: auto;
+  color: dimgrey;
+  width: 1000px;
+
+}
+
+table{
+  width: 800px;
+  height: 300px;
+  text-align: center;
+}
+
+tr,td{
+  align-content: center;
+}
+
+tr{
+  border-bottom: 1px solid lightgray;
+}
+
+tr:first-child{
+  background-color: darkorchid;
+  color: white;
+  font-weight: bold;
+  border-bottom: 2px solid darkmagenta;
+}
+
+tr:nth-child(3){
+  background-color: lightgrey;
+}
+tr:nth-child(5){
+  background-color: lightgrey;
+}
+tr:nth-child(7){
+  background-color: lightgrey;
+}
+
+.left{
+  text-align: left;
+  padding-left: 10px;
+}
+
+.left:hover{
+  background-color: rgb(223, 166, 252);
+  color: white;
+}
+
+.new::before{
+    content: "new";
+    color: white;
+    background-color: blueviolet;
+    border-radius: 6px;
+    font-size: 10px;
+    padding: 2px 6px;
+    margin-right: 5px;
+  } */
+
+
+  /* 쌤이해준 */
+
+  table{
+    width: 700px;
+    margin: 20px auto;
+    text-align: center;
+  }
+
+  thead > tr {
+    background-color: lightsalmon;
+    border-bottom: 1.5px solid salmon;
+    border-top: 1.5px solid salmon;
+    color: white;
+  }
+  
+  tbody > tr{
+    border-bottom: 1px solid #ddd;
+  }
+
+  tbody > tr > td:nth-child(2) {
+    text-align: left;
+  }
+
+  td{
+    padding: 6px;
+  }
+
+  tbody > tr:hover{
+    background-color: #ddd;
+  }
+
+  /* 짝수 : even, 2n  홀수 : odd, 2n+1 or -1 */
+  tbody > tr:nth-child(even){
+    background-color: #eee;
+  }
+

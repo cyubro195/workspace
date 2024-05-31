@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> 선택자 우선순위</title>
+  <link rel="stylesheet" href="선택자 우선순위.css">
+</head>
+
+<!-- 선택자 우선순위 
+  
+  -태그 선택자
+  -아이디 선택자
+  -클래스 선택자
+
+-->
+
+
+<body>
+  
+  <p class="p1">
+    Lorem ipsum dolor sit amet.
+  </p>
+
+  <!-- 인라인 스타일 -->
+  <p style="color: brown; background-color: antiquewhite;">
+    Lorem ipsum dolor sit amet.
+  </p>
+
+  <hr>
+
+  <!-- 태그 우선순위 
+
+  1. !important style
+  2. inline style(은근높네)
+  3. 아이디 선택자
+  4. 클래스 선택자
+  5. 태그 선택자
+  
+-->
+
+  <div class="d1" id="d1">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, maxime?
+  </div>
+
+  <br><hr><br>
+  
+  <div>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, maxime?
+  </div>
+
+
+
+
+</body>
+</html>

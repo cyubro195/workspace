@@ -1,0 +1,32 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+
+.img-div{
+  background-color: lightgray;
+  position: relative;
+
+}
+
+.img-div img{
+  border: 2px solid orange;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+}
+
+.img-div img:nth-child(1){
+  z-index: 3;
+
+}
+.img-div img:nth-child(2){
+  left: 50px;
+  z-index: 2;
+
+}
+.img-div img:nth-child(3){
+  left: 100px;
+  z-index: 1;
+
+}

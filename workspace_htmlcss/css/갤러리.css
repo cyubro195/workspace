@@ -1,0 +1,47 @@
+
+body{
+  background-color: darkslateblue;
+}
+
+.container{ 
+  width: 1000px;
+  margin: 20px auto;
+  background-color: white;
+  border: 2px solid black;  
+}
+
+
+.top_text{
+  text-align: center;
+  padding: 20px;
+}
+
+.top_text button {
+  background-color: salmon;
+  color: white;
+  border-radius: 10px;
+  width: 100px;
+  height: 30px;
+  border: none;
+  margin-bottom: 10px;
+}
+
+.top_text > div {
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+span{
+  color: cornflowerblue;
+
+}
+
+img{
+  width: 240px;
+}
+
+.photo_g{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  background-color: blue;
+}

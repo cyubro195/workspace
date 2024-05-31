@@ -1,0 +1,174 @@
+
+
+
+.container1{
+  border: 1px solid black;
+  width: 800px;
+  height: 600px;
+  margin: auto;
+  margin-top: 20px;
+  color: white;
+  text-align: center;
+}
+
+.header1{
+  width: 100%;
+  height: 10%;
+  border: 3px solid slateblue;
+  background-color: indigo;
+  line-height: 50px;
+}
+
+.main1{
+  background-color: chocolate;
+  display: flex;
+  height: 80%;
+  border: 3px solid fuchsia;
+
+}
+
+.side1{
+  flex-basis: 20%;
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content1{
+  flex-basis: 80%;
+  background-color: cornflowerblue; 
+}
+
+.footer1{
+  width: 100%;
+  height: 10%;
+  border: 3px solid slateblue;
+  background-color: indigo;
+}
+
+/* wwwwwwww */
+
+.container2{
+  border: 1px solid black;
+  width: 800px;
+  height: 600px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.container2 > div {
+  display: flex;
+}
+
+.container2 > div:nth-child(1) {
+  width: 100%;
+  height: 10%;
+}
+
+.container2 > div:nth-child(1) > div:nth-child(1){
+  flex-basis: 60%;
+  border: 5px solid firebrick;
+  background-color: firebrick;
+}
+
+.container2 > div:nth-child(1) > div:nth-child(2){
+  flex-basis: 40%;
+  border: 5px solid lightsalmon;
+  background-color: lightsalmon;
+
+}
+
+.container2 > div:nth-child(2) {
+ height: 80%;
+ background-color: coral;
+
+}
+
+.container2 > div:nth-child(2) > div:first-child{
+  flex-basis: 20%;
+  background-color: lightslategray;
+}
+
+.container2 > div:nth-child(2) > div:last-child{
+  flex-basis: 80%;
+  background-color: blanchedalmond;
+  
+}
+
+.container2 > div:nth-child(3) {
+  width: 100%;
+  height: 10%;
+
+}
+
+.container2 > div:nth-child(3) > div:nth-child(1){
+  flex-basis: 60%;
+  border: 5px solid firebrick;
+  background-color: firebrick;
+}
+
+.container2 > div:nth-child(3) > div:nth-child(2){
+  flex-basis: 40%;
+  border: 5px solid lightsalmon;
+  background-color: lightsalmon;
+
+}
+
+
+
+
+/* wwwwwwww */
+
+
+.container3{
+  width: 800px;
+  height: 600px;
+  margin: auto;
+  border: 3px solid black;
+  background-color: aqua;
+
+}
+
+.header3{
+  width: 100%;
+  height: 20%;
+  background-color: chartreuse;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main3{
+  display: flex;
+  width: 100%;
+  height: 80%;
+}
+
+.content3{
+  width: 60%;
+  background-color: darkkhaki;
+}
+
+.side3{
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+.side3 > div:nth-child(1) {
+  background-color: darkblue;
+  width: 100%;
+  flex-basis: 33.3%;
+}
+.side3 > div:nth-child(2) {
+  background-color: darkorange;
+  width: 100%;
+  flex-basis: 33.3%;
+}
+.side3 > div:nth-child(3) {
+  background-color: cornflowerblue;
+  width: 100%;
+  flex-basis: 33.3%;
+}
