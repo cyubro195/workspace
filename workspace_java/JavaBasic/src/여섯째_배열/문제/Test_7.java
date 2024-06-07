@@ -13,11 +13,22 @@ public class Test_7 {
         Scanner sc = new Scanner(System.in);
         int[] number = new int[5];
 
+        // 배열의 크기만큼 반복해서 입력값을 배열의 각 요소에 저장
         for(int i = 0; i < number.length; i++){
-
+            System.out.print(i + " 번째 요소 입력 : ");
+            number[i] = sc.nextInt();
         }
-        System.out.println("숫자입력 : ");
+        System.out.println(" -배열에 저장된 요소-");
+        for(int i = 0; i < number.length; i++){
+            System.out.println(number[i] + " 0");
+        }
 
+
+        System.out.println();
+        // for each 문으로 변형
+        for(int e : number){
+            System.out.print(e + " ");
+        }
 
 
 
