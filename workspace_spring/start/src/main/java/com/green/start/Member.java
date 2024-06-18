@@ -1,0 +1,37 @@
+package com.green.start;
+
+public class Member {
+    private String name;
+    private int age;
+    private int score;
+
+    public Member(String name, int age, int score) {
+        this.name = name;
+        this.age = age;
+        this.score = score;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
+    }
+}

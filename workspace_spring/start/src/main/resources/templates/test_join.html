@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>회원가입</title>
+</head>
+<body>
+
+  <div th:each=" member: ${memberList} "><!--자바에서 나오는 for:each문이랑 비슷함-->
+    [[${member.name}]]
+    <!-- 내가 한명씩 빼서 멤버라고 부르겠다 -->
+  </div>
+
+  <th:block th:each = " m : ${memberList} "> <!--내가 memberList를 m이라고 부르겠댜-->
+    [[${m.age}]]
+  </th:block> <!--타임리프에 있는 코드임! 태그가 아님,가짜태그,해석이안됨, 반복만할뿐-->
+
+  <br>
+  <hr>
+
+  <table border="1">
+    <tr>
+      <td>이름</td>
+      <td>나이</td>
+      <td>점수</td>
+    </tr>
+    <tr th:each = " member : ${memberList} ">
+      <td>[[${member.name}]]</td>
+      <td>[[${member.age}]]</td>
+      <td>[[${member.score}]]</td>
+    </tr>
+
+  </table>
+
+
+  <br>
+  <hr>
+
+  이름 <input type="text"><br>
+  연락처 <input type="text"><br>
+  성별 <input type="radio">남 <input type="radio">여<br>
+  취미 <input type="checkbox">독서 <input type="checkbox">운동
+  <input type="checkbox">게임 <br>
+  
+  가입경로 <select name="" id=""></select><br>
+
+  <input type="button" value="회원가입">
+  <a href="/main">
+    <input type="button" value="뒤로가기">
+  </a>
+</body>
+</html>
