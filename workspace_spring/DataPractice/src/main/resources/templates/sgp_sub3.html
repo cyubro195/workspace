@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>학생성적 프로그램</title>
+</head>
+<body>
+
+  <h1>학생 성적 입력 프로그램</h1>
+  <p>[[${scoreVO.name}]] 학생의 정보입니다.</p>
+  
+  <form action="/sgp" method="get">
+    이  름 : [[${scoreVO.name}]] <br>
+    학  년 : [[${scoreVO.grade}]]<br>
+    연락처 : [[${scoreVO.tel[0]}]] - [[${scoreVO.tel[1]}]]<br>
+    성  별 : [[${scoreVO.gender}]]<br>
+    국  어 : [[${scoreVO.korscore}]]<br>
+    수  학 : [[${scoreVO.mathscore}]]<br>
+    영  어 : [[${scoreVO.engscore}]]<br>
+    평  균 : [[${avg}]]<br>
+  </form>
+  <input type="button" value="처음으로 가기">
+
+ 
+
+  <!--타임리프 주석 -->
+   <!--/* [[${scoreVO.name}]] */-->
+
+</body>
+</html>

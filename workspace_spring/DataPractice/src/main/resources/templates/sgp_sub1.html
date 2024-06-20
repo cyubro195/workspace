@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>학생성적 프로그램</title>
+</head>
+<body>
+  [[${name}]]
+  <h1>학생성적입력 프로그램</h1>
+  <p> [[${scoreVO.name}]] 학생의 기본정보를 입력합니다.</p>
+
+  <!-- <div th:text = "${scoreVO.name}"></div> 이렇게도 넣어드댐!--> 
+
+  <form action="/sgp_sub2" method="post">
+
+    <input type="hidden" name="name" th:value="${scoreVO.name}"> <!--타임리프문법-->
+    <!--${scoreVO.name} 태그있을때는 []대괄호가 필요없음!-->
+
+    학  년  <input type="text" name="grade"><br>
+    연락처
+    <select name="tel">
+      <option value="010">010</option>
+      <option value="011">011</option>
+      <option value="016">016</option>
+    </select> <!--tel 중복 키워드 넘기면 둘 다 넘어간댜!-->
+    <input type="text" name="tel"><br>
+    
+    성   별
+    <input type="radio" name="gender" value="남"> 남
+    <input type="radio" name="gender" value="여"> 여 <br>
+    
+    <input type="submit" value="확인">
+     <!--submit은 form action 페이지로 이동! -->
+    <input type="button" value="뒤로가기">
+
+  </form>
+  <form action="/sgp" method="post">
+    
+  </form>
+ 
+
+</body>
+</html>
