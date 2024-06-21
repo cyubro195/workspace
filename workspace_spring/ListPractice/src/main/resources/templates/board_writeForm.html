@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글작성하기</title>
+  <link rel="stylesheet" href="/reset.css">
+  <link rel="stylesheet" href="/board_writeForm.css">
+</head>
+<body>
+  
+  
+  <form action="/regBoard" method="post">
+
+  <h1> 글작성</h1>
+  <div class="container">
+    <table>
+      <tr>
+        <td>글번호</td>
+        <td>
+          <input type="text" name="boardNum">
+        </td>
+      </tr>
+      <tr>
+        <td>제목</td>
+        <td>
+          <input type="text" name="title">
+        </td>
+      </tr>
+      <tr>
+        <td>작성자</td>
+        <td>
+          <input type="text" name="writer">
+        </td>
+      </tr>
+      <tr>
+        <td>작성일</td>
+        <td>
+          <input type="date" name="createDate">
+        </td>
+      </tr>
+      <tr>
+        <td>내용</td>
+        <td>
+          <textarea rows="10" name="content"></textarea>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="btn-div">
+    <input type="submit" value="글등록">
+  </div>
+  </form>
+</body>
+</html>

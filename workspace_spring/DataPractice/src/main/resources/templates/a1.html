@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  [[${stuName}]] [[${score}]]
+
+  <!-- /a2로 이동할때 'java'라는 데이터를 'name'이라는 이름으로 전달 -->
+  <a href="/a2?address=java">
+    <!-- 데이터를 많이 가져갈때는 &를 넣어서 추가하기 -->
+    <h3>두번째 페이지로 이동</h3>
+  </a>
+
+  <br>
+
+  <!-- @안에 /하고 이동할페이지를 넣어준댯  -->
+  <a href="/a3?name=kim&age=30">
+    <!-- 데이터를 많이 가져갈때는 &를 넣어서 추가하기 -->
+    <h3>세번째 페이지로 이동</h3>
+  </a>
+  
+  <br>
+  
+  <!-- 타임리프로 쓰는 형식 -->
+  <a th:href="@{/a3(name=${stuName},age=${score})}">
+    <h3>세번째 페이지로 이동</h3>
+  </a>
+
+
+</body>
+</html>
