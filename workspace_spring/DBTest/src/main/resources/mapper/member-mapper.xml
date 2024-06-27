@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 해당 파일에 모든 쿼리문을 작성 -->
+<mapper namespace="memberMapper"> <!-- 파일의 이름임 -->
+
+    <select id="">
+
+    </select>
+
+    <insert id="insert1">
+        INSERT INTO TEST_MEMBER VALUES(7,'봉미선',25,'서울시');
+    </insert>
+
+    <insert id="insert2">
+        INSERT INTO TEST_MEMBER VALUES (8,'신형만',#{age},'광주시');
+    </insert>
+	
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>학생정보목록 페이지</title>
+  <style>
+    .container{
+      width: 800px;
+      margin: 30px auto;
+    }
+    .list-table{
+      border: 1px solid black;
+      width: 100%;
+      text-align: center;
+      }
+    .list-table tr,.list-table td {
+      border: 1px solid black;
+    }
+
+    .btn-div{
+      margin-top: 20px;
+      text-align: center;
+      }
+  </style>
+</head>
+<body>
+
+  <div class="container"> 
+ 
+    <div class="list-div">
+    
+      <table class="list-table">
+      <tr>
+        <td>학생번호</td>
+        <td>학생성명</td>
+        <td>국어점수</td>
+        <td>영어점수</td>
+        <td>종합점수</td>
+      </tr>
+  
+      <!-- 등록된 학생이 없으면 -->
+      <th:bloack th:if="${#lists.isEmpty(stuList)}">
+        <tr>
+          <td colspan="5">현재 등록된 학생이 없습니다.</td>
+        </tr>
+      </th:bloack>
+     
+      <!-- 등록된 학생이 있으면 -->
+      <th:bloack th:unless="${#lists.isEmpty(stuList)}">
+        <!--/* 등록된 학생수만큼 반보해서 행을 생성 */-->
+        <th:block th:each="stu:${stuList} ">
+          <tr>
+            <td>[[${stu.stuNum}]]</td>
+            <td>
+              <a th:href = "@{/stuDetail(stuNum=${stu.stuNum})}">
+              [[${stu.stuName}]]
+              </a>
+            </td>
+            <td>[[${stu.korScore}]]</td>
+            <td>[[${stu.engScore}]]</td>
+            <td>[[${stu.korScore + stu.engScore}]]</td>
+          </tr>
+        </th:block>
+      </th:bloack>
+    
+    </table>
+  
+    </div>
+  
+    <div class="btn-div">
+    <input type="button" value="학생등록" onclick="goRegForm()">
+    </div>
+  
+  </div>
+  
+  
+  
+    <script>
+      //학생등록 버튼 클릭 시 학생등록 페이지로 이동하는 함수만들깃..
+      function goRegForm(){
+        location.href = '/regForm';
+  
+      }
+  
+  
+  
+    </script>
+</body>
+</html>
