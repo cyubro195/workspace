@@ -1,0 +1,41 @@
+
+.board1 {
+  width: 800px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+h3 {
+  color: #a192b8;
+}
+
+table{
+  width: 800px;
+  margin-top: 10px;
+  padding: 5px;
+  border: 2px solid #a192b8;
+}
+
+thead{
+  background-color: #775496;
+  font-weight: bold;
+  font-size: 18px;
+  color: #fff;
+}
+
+tr,td {
+  border: 1px solid #fff;
+}
+
+button{
+  color: #fff;
+  width: 100px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: #775496;
+  border: none;
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 25px;
+  margin-left: 20px;
+}

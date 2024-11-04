@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 해당 파일에 모든 쿼리문을 작성 -->
+<mapper namespace="adminMapper">
+
+    <!--카테고리 목록 조회-->
+    <select id="getCategoryList" resultMap="itemMapper.category">
+        SELECT CATE_CODE
+              ,CATE_NAME
+        FROM ITEM_CATEGORY
+        ORDER BY CATE_CODE ASC
+    </select>
+
+    <!--상품등록-->
+    <insert id="insertItem">
+        INSERT INTO SHOP_ITEM (
+        ITEM_CODE
+            ,CATE_CODE
+            , ITEM_NAME
+            , ITEM_PRICE
+            , ITEM_INTRO
+        )
+        VALUES
+        (
+        #{itemCode}
+            ,#{cateCode}
+            ,#{itemName}
+            ,#{itemPrice}
+            ,#{itemIntro}
+        );
+    </insert>
+
+    <!--상품 이미지 등록 -->
+    <insert id="insertImgs">
+        INSERT INTO ITEM_IMG(
+            ORIGIN_FILE_NAME
+            , ATTACHED_FILE_NAME
+            , IS_MAIN
+            , ITEM_CODE
+        )VALUES         itemVO.getImgList()
+        <foreach collection="imgList" item="img"  separator=",">
+            <!--separator:반복할때마다 자동으로 ',' 를 찍어줌-->
+            (
+            #{img.originFileName}
+            , #{img.attachedFileName}
+            , #{img.isMain}
+            , #{itemCode}
+            )
+        </foreach>
+    </insert>
+
+    <!-- 다음에 들어갈 item_code 조회 -->
+    <select id="getNextItemCode" resultType="int">
+        SELECT IFNULL(MAX(ITEM_CODE), 0) + 1
+        FROM SHOP_ITEM
+    </select>
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 해당 파일에 모든 쿼리문을 작성 -->
+<mapper namespace="salesInfoMapper">
+
+    <resultMap id="sales" type="com.green.Car_system.vo.Sales_InfoVO">
+        <id column="SALES_NUM"          property="salesNum" />
+        <result column="BUYER"          property="buyer" />
+        <result column="BUYER_TEL"      property="buyerTel" />
+        <result column="COLOR"          property="color" />
+        <result column="BUY_DATE"       property="buyDate" />
+        <result column="CAR_NUM"        property="carNum" />
+        <collection property="carInfo" resultMap="carInfoMapper.car" />
+    </resultMap>
+
+    <!--차량 모델 조회-->
+    <select id="getCarModelList" resultMap="carInfoMapper.car">
+        SELECT CAR_NUM
+             , CAR_NAME
+        FROM CAR_INFO
+        ORDER BY CAR_NUM ASC;
+    </select>
+
+    <!--구매자 등록조회-->
+    <select id="getBuyList" resultMap="sales">
+        SELECT SALES_NUM
+            , BUYER
+            , BUYER_TEL
+            , BUY_DATE
+            , COLOR
+            , SALES_INFO.CAR_NUM
+            , CAR_INFO.CAR_NAME
+            , CAR_INFO.CAR_PRICE
+        FROM SALES_INFO , CAR_INFO
+        WHERE SALES_INFO.CAR_NUM = CAR_INFO.CAR_NUM
+        ORDER BY BUY_DATE DESC;
+    </select>
+
+    <!--구매자 등록-->
+    <insert id="insertSales">
+        INSERT INTO SALES_INFO(
+             SALES_NUM
+                , BUYER
+                , BUYER_TEL
+                , COLOR
+                , CAR_NUM
+        )VALUES(
+            #{salesNum}
+                , #{buyer}
+                , #{buyerTel}
+                , #{color}
+                , #{carNum}
+        );
+    </insert>
+
+
+
+	
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

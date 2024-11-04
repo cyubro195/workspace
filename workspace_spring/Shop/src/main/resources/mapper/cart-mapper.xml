@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 해당 파일에 모든 쿼리문을 작성 -->
+<mapper namespace="cartMapper">
+
+    <resultMap id="cart" type="com.green.Shop.cart.vo.CartVO">
+        <id column="CART_CODE"                  property="cartCode" />
+        <result column="ITEM_CODE"              property="itemCode" />
+        <result column="CART_CNT"               property="cartCnt" />
+        <result column="MEM_ID"                 property="memId" />
+        <result column="CART_DATE"              property="cartDate" />
+        <association property="itemVO"          resultMap="itemMapper.item"/>
+    </resultMap>
+
+    <!--이미지 + 장바구니 목록-->
+    <select id="getCartList" resultMap="cart">
+        SELECT CART_CODE
+            ,ITEM_NAME
+            ,ITEM_PRICE
+            ,CART_CNT
+            ,ITEM_PRICE * CART_CNT
+            ,DATE_FORMAT(CART_DATE, '%Y-%c-%d %H:%i') AS CART_DATE  <!--AS를 넣어주고 별칭을 넣어주면 입력이됨!-->
+            ,ATTACHED_FILE_NAME
+        FROM shop_cart CART, shop_item ITEM, item_img IMG
+        WHERE CART.ITEM_CODE = ITEM.ITEM_CODE
+        AND CART.ITEM_CODE = IMG.ITEM_CODE
+        AND MEM_ID = #{memId}
+        AND IS_MAIN = 'Y';
+    </select>
+
+    <!--장바구니 상품등록-->
+    <insert id="insertCart">
+        INSERT INTO SHOP_CART(
+            ITEM_CODE
+            , CART_CNT
+            , MEM_ID
+        )VALUES(
+             #{itemCode}
+             , #{cartCnt}
+             , #{memId}
+        )
+    </insert>
+    <!--장바구니에 등록 전 등록여부 확인-->
+    <select id="checkCart" resultMap="cart">
+        SELECT CART_CODE
+        FROM shop_cart
+        WHERE ITEM_CODE = #{itemCode}
+        AND MEM_ID = #{memId}
+    </select>
+
+    <!--장바구니에 상품 등록 시 수량 업데이트-->
+    <update id="updateCartCnt">
+        UPDATE shop_cart
+        SET
+            CART_CNT = CART_CNT + #{cartCnt}
+            , CART_DATE = NOW()
+        WHERE ITEM_CODE = #{itemCode}
+        AND MEM_ID = #{memId}
+    </update>
+
+
+
+	
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

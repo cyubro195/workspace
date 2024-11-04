@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 해당 파일에 모든 쿼리문을 작성 -->
+<mapper namespace="boardMapper">
+    <!-- resultMap 은 데이터베이스 테이블에서 조회한 데이터를 자바로 가져올 때-->
+    <!-- 어떤 자료형에 담아올지 결정해주는 거 ! -->
+
+    <!--REACT_BOARD 테이블의 조회된 데이터는 boardVO 자료형을 통해서 가져옴!-->
+    <resultMap id="board" type="com.green.ReactBoard.vo.BoardVO">
+        <id column = "BOARD_NUM"      property="boardNum" />
+        <id column = "BOARD_TITLE"    property="boardTitle" />
+        <id column = "BOARD_CONTENT"  property="boardContent" />
+        <id column = "BOARD_WRITER"   property="boardWriter" />
+        <id column = "CREATE_DATE"    property="createDate" />
+    </resultMap>
+
+
+    <select id="getBoardList" resultMap="board">
+        SELECT BOARD_NUM
+            , BOARD_TITLE
+            , BOARD_WRITER
+            , CREATE_DATE
+        FROM REACT_BOARD;
+    </select>
+
+    <select id="getBoardDetail" resultMap="board">
+
+        SELECT BOARD_NUM
+            ,BOARD_TITLE
+            ,BOARD_CONTENT
+            ,BOARD_WRITER
+            ,CREATE_DATE
+        FROM REACT_BOARD
+        WHERE BOARD_NUM = #{boardNum}
+    </select>
+
+    <insert id="regBoard">
+        INSERT INTO REACT_BOARD (
+        <!-- 여기에 순서 맞춰서 입력하셈! 안그러면 오류남! -->
+            BOARD_TITLE
+            ,BOARD_CONTENT
+            ,BOARD_WRITER
+        ) VALUES(
+            #{boardTitle}
+            ,#{boardContent}
+            ,#{boardWriter}
+        )
+
+    </insert>
+
+    <!--글 수정하기 -->
+
+
+
+
+
+    <!--글 삭제하기 -->
+    <delete id="boardDelete">
+        DELETE FROM REACT_BOARD
+        <!--위에만치면 전체 다 날라가요~-->
+        WHERE BOARD_NUM = #{boardNum}
+    </delete>
+
+
+
+
+
+	
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
