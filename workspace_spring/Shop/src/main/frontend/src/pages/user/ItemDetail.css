@@ -1,0 +1,128 @@
+
+
+.item-detail-div {
+  width: 100%;
+  margin-top: 30px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.item-detail-intro1 {
+  width: 80%;
+  height: 20px;
+  margin: 0 auto;
+  border-radius: 10px 10px 0px 0px;
+  /* background-color: #34291C; */
+  background-color: #615240;
+  margin-top: 30px;
+}
+
+.item-detail-intro2 {
+  width: 80%;
+  height: 20px;
+  margin: 0 auto;
+  border-radius: 0px 0px 10px 10px;
+  background-color: #615240;
+}
+
+.item-info-div{
+  width: 80%;
+  margin: 0px auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border: 0.5px solid lightgray;
+
+}
+
+.item-img {
+  width: 45%;
+  padding: 10px;
+  /* border-radius: 10px;
+  border: 1px solid lightgray; */
+}
+
+.item-img > img {
+  width: 380px;
+  height: 500px;
+  border: 1px solid lightgray;
+}
+
+.item-name {
+  width: 55%;
+  height: 500px;
+  margin-left: 10px;
+  text-align: left;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.item-name > h3 {
+  font-size: 24px;
+  font-family: 'MaruBuri';
+}
+
+.item-name > p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.item-btn > button{
+  width: 120px;
+  height: 30px;
+  padding: 5px;
+  margin-right: 20px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  background-color: #34291C;
+}
+
+.item-number {
+  width: 50px;
+  height: 30px;
+  margin-left: 10px;
+  border: 0.5px solid lightgray;
+  border-radius: 5px;
+}
+.item-intro-div{
+  width: 80%;
+  background-color: #F8F8F8;
+  margin: 20px auto;
+  text-align: left;
+  padding: 30px;
+  border: 0.3px solid #eee;
+}
+
+.item-intro-div h2 {
+  margin-bottom: 10px;
+}
+
+.item-detail{
+  width: 80%;
+  margin: 0 auto;
+  background-color: ivory;
+}
+
+.item-detail > img {
+  width: 70%;
+  margin-top: 30px;
+}
+
+.item-detail-intro {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  font-size: 16px;
+  text-align: left;
+  font-family: 'MaruBuri';
+  color: #fff;
+  padding-left: 20px;
+  background-color: #615240;
+}
+

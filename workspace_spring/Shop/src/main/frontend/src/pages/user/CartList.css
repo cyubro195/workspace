@@ -1,0 +1,65 @@
+
+
+.cart-container {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 20px;
+
+}
+
+.cart-container > h2 {
+  font-size: 25px;
+  font-family: 'MaruBuri';
+  margin: 20px;
+
+}
+
+.cart-content {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.cart-table{
+  width: 100%;
+  text-align: center;
+}
+
+.cart-table tr,td {
+  border: 1px solid red;
+}
+
+
+.cart-table > thead {
+  text-align: center;
+  padding: 5px;
+  height: 40px;
+  background-color: #F8F8F8;
+  vertical-align: auto;
+  border-bottom: 2px solid lightgray;
+}
+
+
+.cart-table > tbody td {
+  padding: 10px;
+  vertical-align: middle;
+}
+
+
+.img-td {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.img-td > img {
+  width: 20%;
+  display: block;
+}
+
+.totalcart {
+  text-align: right;
+}
+
+

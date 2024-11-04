@@ -1,0 +1,11 @@
+
+
+import  할때 링크주소 줄ㄸ때
+
+import * as boardApi from > 전체로 불러오는거 
+
+'./apis'; > 같은 폴더안에서 불러오는거!!!
+
+import * as boardApi from '../apis/boardApi'; 위에 상위 폴더에 들어가겠습니다~
+
+

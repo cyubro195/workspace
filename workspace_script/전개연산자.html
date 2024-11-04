@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    p { color: brown;}
+  </style>
+</head>
+<body>
+  <h2> ★전개연산자★ </h2>
+  <p>객체와 배열에서 사용</p>
+  <p>★리애애액트에서 매니매니 많이 씀★</p>
+
+<script>
+
+  //배열에서의 전개연산자★
+  const arr1 = [1,2,3];
+  const arr2 = [5,'java',7,arr1];
+  console.log(arr2.length);
+  console.log(arr2);
+
+  const arr3 = [5,7,...arr1];
+  console.log(arr3);
+
+  //객체에서의 전개 연산자
+  const phone = {
+    os : 'ios',
+    price : 18000,
+    brand: 'apple',
+    color : 'white'
+  };
+
+  const phone2 = {
+    os : 'android',
+    price : 10000,
+    brand: 'samsung',
+    color : 'black'
+  };
+
+  const phone3 = {
+    ...phone,
+    color : 'black'
+  };
+
+  //전개연산자를 사용하는 이유
+  const array = [1,2,3];
+  array.push(4); // [1,2,3,4]
+  console.log(array);
+
+  const array2 = array; // [1,2,3,4] 라는 같은 값을 주는겅!
+  array[0] = 9;
+  console.log(array);
+  console.log(array2);
+
+
+  //전개연산자를 사용한 @복-사@
+  const array3 = [10,20,30];
+  const array4 = [...array3];
+  console.log(`array3 = ${array3}`);
+  console.log(`array4 = ${array4}`);
+  array3[0] = 100;
+  console.log(`array3 = ${array3}`);
+  console.log(`array4 = ${array4}`);
+
+  const monitor = {
+    brand : '삼성',
+    price : 10000,
+    color : 'black'
+  };
+
+  const monitor2 = {...monitor};
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

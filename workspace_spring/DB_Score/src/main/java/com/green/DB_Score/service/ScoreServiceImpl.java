@@ -16,7 +16,32 @@ public class ScoreServiceImpl implements ScoreService {
     @Override
     public List<StudentVO> getStuList() {
        List<StudentVO> list = sqlSession.selectList("scoreMapper.getStuList");
-
        return list;
     }
+
+    @Override
+    public void insertStudent(StudentVO studentVO) {
+        sqlSession.insert("scoreMapper.insertStudent",studentVO);
+
+    }
+
+    @Override
+    public StudentVO getStuDetail(int stuNum) {
+        StudentVO student = sqlSession.selectOne("scoreMapper.getStuDetail",stuNum);
+                                                //실행할때 뒤에 stuNum 은 빈 값 뭐로 채울꺼냐는 뜼!
+        return student;
+    }
+
+    //사ㅏ아아아악제에에에에에에
+    @Override
+    public void delete(int stuNum) {
+       sqlSession.delete("scoreMapper.stuDelete",stuNum);
+    }
+
+    @Override
+    public void stuUpdate(StudentVO studentVO) {
+        sqlSession.update("scoreMapper.stuUpdate",studentVO);
+    }
+
+
 }

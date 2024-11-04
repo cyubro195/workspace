@@ -1,0 +1,386 @@
+
+.container{
+  width: 100vw;
+}
+
+.header{
+  width: 100%;
+  height: 340px;
+  position: relative;
+}
+
+.header-box{
+  width: 100%;
+  height: 40px;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  padding-top: 10px;
+}
+
+.logout-box{
+  width: 20%;
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 5px;
+  top: 5px;
+  right: 200px;
+}
+
+.logout-box > span{
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cart-div > p {
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.logo {
+  position: absolute;
+  left: 200px;
+  font-size: 30px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #fff;
+}
+
+.login-div {
+  width: 8%;
+  position: absolute;
+  right: 150px;
+  top: 10px;
+  display: flex;
+  justify-content: space-between;
+  text-align: right;
+}
+
+.login-div a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.login-div > li:hover{
+  color: gray;
+  font-weight: bold;
+}
+
+.banner-img{
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(90%);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* .banner-img{
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(98%);
+
+} */
+
+.title-div {
+  color: #eee;
+  font-size: 3rem;
+  letter-spacing: 10px;
+  word-spacing: 20px;
+  position: absolute;
+  bottom: 0%;
+  left: 25%;
+  margin: 0 auto;
+  transform: translate(50%,-50%);
+}
+
+.title-div > span {
+  font-weight: bold;
+}
+
+.title-div > p {
+  font-size: 2rem;
+  letter-spacing: 10px;
+  word-spacing: 20px;
+  padding-left: 40px;
+	font-family: 'MaruBuriLight';
+
+}
+
+
+.layout-div{
+  width: 85%;
+  height: 800px;
+  margin: 0 auto;
+  margin-top: 10%;
+}
+
+
+
+
+
+
+/* .............. 공통 디자인 ...........  */
+
+
+.form-control{
+  width: 85%;
+  height: 30px;
+  padding: 4px;
+  margin: 3px 0;
+  border-radius: 6px;
+  border: 1px solid lightgray;
+}
+
+.form-control::placeholder{
+  font-size: 0.7rem;
+}
+
+.form-control:focus{
+  outline: 1px solid lightgray;
+}
+
+.small-input {
+  width: 55%;
+  height: 30px;
+  margin: 3px 0;
+  border-radius: 6px;
+  margin-right: 5px;
+  border: 1px solid lightgray;
+}
+
+.small-input:focus{
+  outline: 1px solid lightgray;
+}
+
+.small-input::placeholder{
+  font-size: 0.7rem;
+}
+
+.btn{
+  padding: 6px 10px;
+  color: #fff;
+  background-color: #d4d4d4;
+  width: 250px;
+  border: none;
+  border-radius: 5px;
+  margin-left: 3px;
+  cursor: pointer;
+}
+
+.btn1{
+  padding: 6px 10px;
+  font-size: 16px;
+  color: #000;
+  background-color: #eee;
+  width: 150px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.btn1:hover{
+  font-weight: bold;
+  background-color: #d4d4d4;
+}
+
+.btn:hover{
+  font-weight: bold;
+  background-color: #34291C;
+}
+
+
+/* ....................................... */
+
+/* 모달창 디자인 */
+
+.modal-container{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  background-color: rgba(0,0,0,0.3);
+  z-index: 99;
+  animation: fadeOut 0.3s ease-out forwards;
+
+}
+
+.modal-container.show{
+  animation-name: fadeIn;
+}
+
+.modal-container > .modal{
+  width: 700px;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 8rem;
+  background-color: #fff;
+  animation: slideUp 0.3s ease-out forwards;
+
+}
+
+.modal-container.show > .modal{
+  animation: slideDown;
+}
+
+/* 모달 애니메이션 정의 */
+@keyframes fadeIn{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+
+}
+
+@keyframes fadeOut{
+  from{
+    opacity: 1;
+  }
+  to{
+    opacity: 0;
+  }
+}
+
+@keyframes slideDown{
+  from{
+    transform: translateY(-50px);
+  }
+  to{
+    transform: translateY(0px);
+  }
+}
+
+@keyframes slideUp{
+  from{
+    transform: translateY(0px);
+  }
+  to{
+    transform: translateY(-50px);
+  }
+}
+
+/* 네비 */
+
+.menu-div{
+  color:  #002456;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.menu-ul > li:hover{
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.menu-ul > li > a{
+  text-decoration: none;
+  color:  #002456;
+}
+
+.menu-div > .menu-ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.menu-div > .menu-ul > li{
+  width: 160px;
+  /* border: 1px solid black; */
+  text-align: center;
+}
+
+
+/* ---- 사이드바 디자인 ----- */
+
+.side-menu {
+  width: 80%;
+  display: flex;
+  margin: 0 auto;
+}
+
+.sidenav{
+  width: 18%;
+  height: 630px;
+  background-color: #453B29;
+  padding-top: 20px;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.sidenav > li {
+  width: 90%;
+  height: 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 10px 0px;
+}
+
+.sidenav > li:hover {
+  font-weight: bold;
+}
+
+.sidenav a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #fff;
+  padding-left: 20px;
+	font-family: 'MaruBuri';
+}
+/* 
+.sub-icon {
+  font-size: 15px;
+  color: #fff;
+} */
+
+.side-menu-bar2 {
+  width: 18%;
+  height: 630px;
+  background-color: #453B29;
+  /* background-color: #221709; */
+  padding-top: 20px;
+  border-radius: 0px 10px 10px 0px;
+}
+
+
+/* validation 디자인 */
+.feedback{
+  color: red;
+  font-size: 0.7rem;
+  margin-top: 4px;
+  visibility: hidden;
+}
+
+.feedback > span{
+  font-weight: bold;
+}
+
+.feedback.error{
+  color: red;
+  visibility: visible;
+}
+
+.feedback.good{
+  color: #002456;
+  visibility: visible;
+}
+
+.adminmode{
+  cursor: pointer;
+}

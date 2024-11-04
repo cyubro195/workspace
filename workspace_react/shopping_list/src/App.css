@@ -1,0 +1,49 @@
+.App {
+  text-align: center;
+  width: 1000px;
+  margin:  0 auto;
+  margin-top: 50px;
+}
+
+
+.container{
+  border: 1px solid black;
+  width: 100%;
+  padding: 20px;
+}
+
+
+h1{
+  text-align: left;
+  font-weight: 300;
+}
+
+.box{
+  background-color: #eee;
+  border: 1px solid lightgray;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+}
+
+button {
+  background-color: cornflowerblue;
+  color: #fff;
+  width: 8%;
+  height: 25px;
+  border: none;
+  margin-left: 5px;
+  font-size: 14px;
+}
+
+span.item{
+
+  width: 200px;
+  display: inline-block;
+
+}
+
+.item-div{
+  margin-bottom: 10px;
+}

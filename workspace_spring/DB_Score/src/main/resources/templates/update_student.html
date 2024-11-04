@@ -7,16 +7,16 @@
 </head>
 <body>
     
-<form action="/updateStu" method="post">
-  <input type="hidden" name="year" th:value="${student.year}"> 
+<form action="/stuUpdate" method="post">
+  <input type="hidden" name="stuNum" th:value="${student.stuNum}"> 
   <!-- 데이터가 필요하기위해서 가져가야함! -->
   <table>
     <tr>
       <td>학번</td>
-      <td>[[${student.year}]]</td>
+      <td>[[${student.stuNum}]]</td>
       <td>이름</td>
       <td>
-        <input type="text" name="name" th:value="${student.name}">
+        <input type="text" name="stuName" th:value="${student.stuName}">
       </td>
     </tr>
     <tr>
@@ -36,8 +36,11 @@
       </td>
     </tr>
   </table>
-  <input type="submit" value="뒤로가기">
-  <button type="submit">정보수정</button>
+  <input type="submit" value="수정하기">
+
 </form>
+<input type="submit" value="뒤로가기">
+
+
 </body>
 </html>

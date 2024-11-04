@@ -4,6 +4,7 @@ import javax.xml.transform.Result;
 import java.nio.channels.Pipe;
 import java.util.Arrays;
 
+/*
 public class Test_3 {
     public static void main(String[] args) {
         // test1(2);
@@ -11,19 +12,23 @@ public class Test_3 {
         // test5(a); // 변수명은 상관하지마셈!
         // System.out.println(test3(20));
         //System.out.println(test4(5));
+*/
 /*
 
         int[] arr = {1 ,7, 5, 3, 2};
         int max = test6(arr);
         System.out.println(max);
-*/
+*//*
+
         //test6();
-        /*
+        */
+/*
         String[] ar = {"a"+"b"+"c"};
         String result = test7(ar);
         System.out.println(result);
-        */
-        int[] a = {1,2,3,4,5,6,7,8,9,10}
+        *//*
+
+        int[] a = {1,2,3,4,5,6,7,8,9,10};
         int[] result = test9(a);
 
 
@@ -98,19 +103,24 @@ public class Test_3 {
     }
 
     //2번 문제
-   /* public static int test3(int num) {
+   */
+/* public static int test3(int num) {
         int cnt = 0;
         for (int i = 1; i < 101; i++) {
             if (i % 3 == 0) {
                 cnt++;
             }
         }
-    }*/
+    }*//*
+
 
     //1번 문제
-    /*public static int test1(int num) {
+    */
+/*public static int test1(int num) {
         for (int i = 0; i < 10; i++) {
             System.out.println(num + "*" + i + "=" + (num * i));
         }
-    }*/
+    }*//*
+
 }
+*/

@@ -1,0 +1,33 @@
+
+.sale-content {
+  width: 100%;
+  margin-top: 40px;
+  padding: 30px;
+  text-align: center;
+  background-color: #F3F4F6;
+  border-radius: 10px;
+
+}
+
+.sale-table {
+  width: 70%;
+  text-align: left;
+  margin: 0 auto;
+
+}
+
+.sale-table tr td {
+  border: none;
+}
+
+.sale-input{
+  width: 200px;
+  height: 25px;
+  border-radius: 3px;
+  border: none;
+
+}
+
+.btn1 {
+  margin-top: 20px;
+}

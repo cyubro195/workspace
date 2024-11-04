@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <h2>★객★체★와★배★열★다★루★기</h2>
+
+  <h1> 끄아ㅏ앙아아ㅏ아아악!!!!으아아아아ㅏㅇ아ㅏ아앆!!!!</h1>
+
+  <script>
+    const movie_info = [{
+
+      movie_title : '롯데시네마',
+      theater : ['울산점','부산점','서울점'],
+      grade : [4.0, 3.8, 3.2]
+
+    },
+    {
+
+      movie_title : 'CGV',
+      theater : ['대구점','부산점','서울점'],
+      grade : [4.5, 4.9, 4.2]
+
+    },
+    {
+
+      movie_title : '메가박스',
+      theater : ['울산점','대전점','광주점'],
+      grade : [4.0, 4.8, 3.9]
+
+    }];
+
+    //영화 중에서 평균 평점이 가장 높은 영화의 평균 평점출력
+    //1. 반복하면서 각 영화의 평균 평점을 계산
+    let max_grade = 0;
+    movie_info.forEach(function(movie,i){
+      
+      // movie 평점 구하는
+      // console.log(`i = ${i}`);
+      // console.log(movie);
+      //movie.grade 각 영화의 평점배열에 접근
+
+      //각 영화의 평균 배열의 요소의 합을 구함
+      let sum = 0;
+      for(const grade of movie.grade){
+        sum = sum + grade;
+      }
+      const avg = sum / movie.grade.length;
+       //console.log(avg) 평균평점
+       if(max_grade < avg){
+        max_grade = avg;
+       }
+    });
+
+    console.log(max_grade);
+
+    //////////////////////////////
+
+    //영화제목이 'cgv'인 영화를 제외한 나머지 영화의 모든 상영관명을 배열 저장
+    const theater_arr = [];
+    movie_info.forEach(function(e, index){
+      if(e.movie_title != 'CGV'){
+        for(const each of e.theater){
+          theater_arr.push(each);
+        }
+      }
+    })
+
+    console.log(theater_arr); //자바형식으로 풀이한거임!
+
+
+    // const whereCGV = []; 지퓌티 답 
+
+    // movie_info.forEach(function(movie){
+    //   if(movie.movie_title !== 'CGV'){
+    //     whereCGV.push(movie.theater);
+    //   }
+    // });
+
+    // console.log("CGV를 제외한 나머지 영화의 상영관명 배열:", whereCGV);
+
+
+  </script>
+</body>
+</html>

@@ -49,17 +49,17 @@
       <!-- 등록된 학생이 있으면 -->
       <th:bloack th:unless="${#lists.isEmpty(stuList)}">
         <!--/* 등록된 학생수만큼 반보해서 행을 생성 */-->
-        <th:block th:each="stu:${stuList} ">
+        <th:block th:each="student:${stuList} ">
           <tr>
-            <td>[[${stu.stuNum}]]</td>
+            <td>[[${student.stuNum}]]</td>
             <td>
-              <a th:href = "@{/stuDetail(stuNum=${stu.stuNum})}">
-              [[${stu.stuName}]]
+              <a th:href = "@{/stuDetail(stuNum=${student.stuNum})}">
+              [[${student.stuName}]]
               </a>
             </td>
-            <td>[[${stu.korScore}]]</td>
-            <td>[[${stu.engScore}]]</td>
-            <td>[[${stu.korScore + stu.engScore}]]</td>
+            <td>[[${student.korScore}]]</td>
+            <td>[[${student.engScore}]]</td>
+            <td>[[${student.korScore + student.engScore}]]</td>
           </tr>
         </th:block>
       </th:bloack>
@@ -79,7 +79,7 @@
     <script>
       //학생등록 버튼 클릭 시 학생등록 페이지로 이동하는 함수만들깃..
       function goRegForm(){
-        location.href = '/regForm';
+        location.href = `/regForm`;
   
       }
   

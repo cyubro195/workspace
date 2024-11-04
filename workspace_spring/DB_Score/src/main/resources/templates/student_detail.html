@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>학생정보 상세보기</title>
 </head>
 <body>
   <table border="1">
     <tr>
       <td>학번</td>
-      <td>[[${student.year}]]</td>
+      <td>[[${student.stuNum}]]</td>
       <td>이름</td>
-      <td>[[${student.name}]]</td>
+      <td>[[${student.stuName}]]</td>
     </tr>
     <tr>
       <td>국어점수</td>
@@ -27,42 +27,26 @@
 
 
   <input type="button" value="뒤로가기" onclick="goBack()">
-  <input type="button" value="학생수정" th:onclick="goUpdateForm([[${student.year}]])">
-
-  <button type="button" value="학생삭제" th:onclick="goDelete([[${student.year}]])">학생삭제</button>
-  <!-- 
-  또 다른방법으론느 
-  <input type="button" value="학생삭제" th:onclick="goDelete([[${student.year}]])"> 
-  
-  -->
-   <!-- 
-    현재 상세보기하고 있는 게시글을 삭제하고,
-    게시글 목록 페이지로 이동
-    -->
+  <input type="button" value="학생수정" th:onclick="goUpdate([[${student.stuNum}]])">
+  <button type="button" value="학생삭제" th:onclick="goDelete([[${student.stuNum}]])">학생삭제</button>
+ 
   <script>
+    
     //뒤로가기 버튼 클릭 시 실행 함수
     function goBack(){
-      //뒤로가기
-      // history.back(-1); // 애가 진짜 뒤로가기
-      location.href = '/'; // 애는 목록페이지로 가는 < 저 녀석은 가짜에오! 근데 애가 제일 많이씀...
+      location.href = '/'; 
     }
 
-    function goDelete(year){
+    function goDelete(stuNum){
       const result = confirm('삭제?');
 
-
-      if(result){
-        location.href = `/stuDelete?year=${year}`; 
-                        // stuDelete?year=123과 같음
-      }
-     
+      location.href = `/stuDelete?stuNum=${stuNum}`; 
+  
     }
 
-    //학생 수정버튼 클릭 -> 학생정보를 수정할수있는 페이지로 이동하는 기능!
-    function goUpdateForm(year){ //수정할수있는 양..?ㅆㄲ?
-      location.href=`/updateForm?year=${year}`; //변수명써주기 위에랑 동일하대ㅠㅠ
-                    //기억해랏!수정할 학번의 데이터만 넘겨주면된다!!
-
+    //수정하기
+    function goUpdate(stuNum){
+        location.href = `/updateForm?stuNum=${stuNum}`;
     }
 
 

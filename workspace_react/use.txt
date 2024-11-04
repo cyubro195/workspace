@@ -1,0 +1,50 @@
+
+리액트 useEffect();
+
+
+
+해당 컴포넌트가 랜더링되면 마지막에 실행됨.
+useEffect를 사용하여 마운트/언마운트/업데이트시 할 작업 설정
+
+
+
+useEffect(() => {//마운트
+
+
+
+
+return () => {//언마운트
+//useEffect 반환되는 함수는 cleanup 함수 (뒷정리)
+//deps 가 비어있는 경우에는 컴포넌트가 사라질 때 cleanup 함수가 호출
+
+
+return 안의 내용은 마운트 될 때 실행 X안함 
+update 될때 실행되는데 가장 먼저 실행 함.
+unmount 될때도 실행가넝! 
+
+
+
+};
+}, []);
+
+
+
+
+
+
+
+
+deps에 빈배열: 처음에만 함수 호출
+deps에 의존값 존재 : 처음과 지정값이 변경될 때 호출
+deps가 아예 없는 경우 : 컴포넌트가 리렌더링 될 때마다 호출
+*부모컴포넌트가 리렌더링되면 자식 컴포넌트 또한 리렌더링 -> 최적화필요
+
+deps에 빈 배열
+처음 컴포넌트 마운트 됐을 때 useEffect내 함수 호출 (componentDidmount)
+컴포넌트 언마운트 될 때 cleanup 함수 호출 (componentWillUnmount)
+deps에 의존 값 존재
+처음 컴포넌트 마운트 됐을 때 useEffect내 함수 호출 (componentDidmount)
+의존 값이 업데이트 됐을 때 (componentDidUpdate)
+컴포넌트 언마운트 될 때 cleanup 함수 호출 (componentWillUnmount)
+아예 파라미터를 안 넣었을 경우
+그냥 리렌더링 될 때마다 함수 호출

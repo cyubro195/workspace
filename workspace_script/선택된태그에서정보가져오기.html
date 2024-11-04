@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <div>
+    <input type="text" name="이름" class="input1" placeholder="이름을 입력하소">
+  </div>
+
+  <div id="d1">두번째 띠앞부이</div>
+
+  <table border="1">
+    <tr>
+      <td>국어점수</td>
+      <td>영어점수</td>
+    </tr>
+    <tr class="aaa">
+      <td>70</td>
+      <td>80</td>
+    </tr>
+  </table>
+
+  <span>
+    [$result]
+  </span>
+
+
+  <script>
+
+    //선택한 태그의 속성값 받아오기
+    //input 태그 선택
+    const inputTag = document.querySelector('input');
+    console.log(inputTag.type);
+    console.log(inputTag.name);
+    console.log(inputTag.placeholder);
+    console.log(inputTag.className);
+    console.log(inputTag['type']);
+
+    //선택한 태그의 속성값 변경
+    inputTag.name = 'java';
+    inputTag.placeholder = '잠이와요';
+
+
+    //'두번째 div' 자바스크립트로 가져와서 console에 출력
+    const d1 = document.querySelector('#d1');
+    console.log(d1.textContent);
+
+    // 국어+영어 합구하셈
+    // 1번 방법
+    const tr1 = document.querySelector('.aaa > td:first-child').textContent;
+    const tr2 = document.querySelector('.aaa > td:last-child').textContent;
+
+    const result = Number(tr1) + Number(tr2);
+    //이렇게 해야 숫자로 되서 합쳐짐 안그럼 7080 문자로 나옴
+    console.log(result);
+
+    const spanTag = document.querySelector('span');
+    spanTag.textContent = result;
+
+    const tr3 = document.querySelector('.aaa > td:nth-child(1)').textContent;
+    const tr4 = document.querySelector('.aaa > td:nth-child(2)').textContent;
+    const result1 = Number(tr3) + Number(tr4);
+    console.log(result1);
+
+    //ㅇㅣ거 자바스크립트 2번문제 활용해서 푸셈!!!!!!!!
+
+    
+
+
+
+  </script>
+</body>
+</html>

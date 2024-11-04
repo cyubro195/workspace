@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>그린게시판 상세조회중</title>
+</head>
+<body>
+  <table border="1">
+    <tr>
+      <td>글번호</td>
+      <td>[[${board.boardNum}]]</td>
+      <td>조회수</td>
+      <td>[[${board.readCnt}]]</td>
+    </tr>
+    <tr>
+      <td>작성일</td>
+      <td>[[${board.createDate}]]</td>
+      <td>작성자</td>
+      <td>[[${board.writer}]]</td>
+    </tr>
+    <tr>
+      <td>제 목</td>
+      <td colspan="3">[[${board.title}]]</td>
+    </tr>
+    <tr>
+      <td>자기소개</td>
+      <td colspan="3">[[${board.content}]]</td>
+    </tr>
+  </table>
+
+  <input type="button" value="목록가기" onclick="test1()">
+  <input type="button" value="목록가기" onclick="test2()">
+  <input type="button" value="수정하기" th:onclick="goUpdate([[${board.boardNum}]])">
+  <button type="button" value="삭제하기" th:onclick="goDelete([[${board.boardNum}]])">
+    삭제하기
+  </button>
+
+  <script>
+    function test1(){
+      history.back(-1);
+    }
+    function test2(){
+      location.href=`/`;
+    }
+
+    function goDelete(boardNum){
+      const result = confirm('삭제하시겠습니까?');
+      location.href=`/deleteBoard?boardNum=${boardNum}`;
+    }
+
+    function goUpdate(boardNum){
+      location.href = `/updateForm?boardNum=${boardNum}`;
+    }
+
+  </script>
+
+</body>
+</html>

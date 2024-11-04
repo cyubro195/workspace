@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form action="/updateForm" method="post">
+    <input type="hidden" name="boardNum" th:value="${board.boardNum}"> 
+    <!-- 데이터가 필요하기위해서 가져가야함! -->
+
+    <table border="1">
+      <tr>
+        <td>글번호</td>
+        <td>[[${board.boardNum}]]</td>
+        <td>조회수</td>
+        <td>[[${board.readCnt}]]</td>
+      </tr>
+      <tr>
+        <td>작성일</td>
+        <td>[[${board.createDate}]]</td>
+        <td>작성자</td>
+        <td>[[${board.writer}]]</td>
+      </tr>
+      <tr>
+        <td>제 목</td>
+        <td colspan="3">
+          <textarea name="title">[[${board.title}]]</textarea>
+        </td>
+      </tr>
+      <tr>
+        <td>자기소개</td>
+        <td colspan="3">
+          <textarea name="content">[[${board.content}]]</textarea>
+        </td>
+      </tr>
+    </table>
+   
+  </form>
+  <input type="submit" value="수정하기">
+  <input type="submit" value="뒤로가기">
+</body>
+</html>
