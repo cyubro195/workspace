@@ -1,0 +1,13 @@
+로그인....
+
+1. id,pw 입력받음
+2. 입력받은 id,pw 가 없는 회원 조회
+3. 조회된 데이터가 없으면 로그인 실패
+4. 조회된 데이터가 나오면 조회한 정보를 sessionStorage에 저장
+
+
+
+[ 로그아웃 ]
+1.sessionStorage네 저장된 로그인 성조 삭제..
+window sessionStorage.removeItem(key);
+

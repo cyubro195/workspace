@@ -1,0 +1,63 @@
+
+vscode 터미널에서 최초 1회만 실행
+
+npm install -g create-react-app  > 맨 처음 쳐주기 
+
+
+npx create-react-app . < 그 다음에 이친구를 쳐주세요! 뛰어쓰기 한번만!
+
+프로젝트 시작 : npm start
+
+리액트 인터넷 창이 뜨명! 
+
+*public 에는 html 파일이 있음!!!!!!
+
+--------------------
+
+# 페이지 이동할때 
+
+npm install react-router-dom
+
+----------------------------------------------------
+서버와 데이터 통신에 필요한거 ( Axios ) - 자바랑 연결
+npm install axios
+----------------------------------------
+
+패키지.json에 들어가서 
+마지막 끝나기 전에 } , 쉼표넣고! 넣어주기 
+"proxy": "http://localhost:8080"
+
+-------------------------------------------------
+
+index.js 에 들어가서 
+//<React.StrictMode>
+   <BrowserRouter>
+    <App />
+  </BrowserRouter> 
+  //</React.StrictMode>
+
+위아래 주석넣어주고 브라우저 불러주기 
+
+--------------------------------------------------------
+
+-- 끝낼때능
+
+컨트롤 +c 누른다음에 
+
+끝내시겠습니까? 뜨면 Y 누르기!!!!!
+
+
+-----------
+
+페이지이동
+
+npm i react-js-pagination
+
+---------
+
+리액트 아이콘
+npm i react-icons
+
+--------------
+부트스트랩 
+npm install react-bootstrap bootstrap
